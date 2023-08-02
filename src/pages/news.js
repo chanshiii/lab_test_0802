@@ -4,6 +4,15 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
+const Header = () => {
+  return (
+    <div className={style.pokempn_logo}>
+      <img src="https://pngimg.com/uploads/pokemon_logo/pokemon_logo_PNG5.png" alt="pokempn_logo" />
+    </div>
+  );
+};
+
 const news = () => {
     const settings = {
       dots: true,
@@ -13,6 +22,9 @@ const news = () => {
       slidesToScroll: 1
     };
   return (
+    <div className="slider-container">
+      {/* ヘッダーコンポーネントを呼び出し */}
+      <Header />
         <Slider {...settings}>
         <div className={style.a}>
           <img src="https://trance-cell.com/wp-content/uploads/c76f18d4f7b5fd0e1b40adb0e953c1c7-500x500.png" alt="Slide 1" />
@@ -96,6 +108,7 @@ const news = () => {
           <img src="https://trance-cell.com/wp-content/uploads/2020/11/c87adf7a38c327bbfdd7ddb0637e3db2.png" alt="Slide 27" />
         </div>
       </Slider>
+    </div>
   )
 }
 export default news
